@@ -1,10 +1,16 @@
-import Input from './components/Input.tsx';
+import Button from './components/Button.tsx';
 
 function App() {
   return (
     <main>
-      <Input id="name" label="Name" type="text" />
-      <Input id="age" label="Age" type="text" />
+      <p>
+        <Button el="button">Button</Button>
+      </p>
+      <p>
+        <Button el="anchor" href="https://google.com">
+          Link
+        </Button>
+      </p>
     </main>
   );
 }
