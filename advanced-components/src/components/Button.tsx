@@ -15,7 +15,7 @@ export default function Button(props: ButtonProps | AnchorProps /* union */) {
 
   return (
     <button className="button" {...props}>
-      Button
+      {props.children}
     </button>
   );
 }
