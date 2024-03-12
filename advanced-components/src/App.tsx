@@ -7,8 +7,17 @@ function App() {
   const formRef = useRef<FormHandle>(null);
 
   const handleSubmit = (data: unknown) => {
-    const extractedData = data as { name: string; age: number };
-    console.log(extractedData);
+    // type guard
+    if (
+      !data ||
+      typeof data !== 'object' ||
+      !('name' in data) ||
+      !('age' in data)
+    ) {
+      return;
+    }
+
+    console.log(data);
     formRef.current?.clear();
   };
   return (
